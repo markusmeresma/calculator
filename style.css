@@ -1,0 +1,133 @@
+:root {
+    --gray: #808080;
+    --orange: #FF8C00;
+    --darkgrey: #A9A9A9;
+    --white: #FFF;
+}
+
+* {
+    margin: auto;
+    font-family: 'Fira sans', sans-serif;
+    box-sizing: border-box;
+}
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 2rem 1rem;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+.output-screen {
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    border: none;
+    background-color: #696969;
+    color: #FFF;
+    text-align: right;
+}
+
+button {
+    height: 60px;
+    background-color: var(--white);
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    font-size: 2rem;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+.operator{
+    background-color: var(--orange);
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.clear-all{
+    background-color: var(--darkgrey);
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    padding: 20px;
+}
+
+#button-0 {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.decimal {
+    grid-row-start: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#button-1 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+}
+
+#button-2 {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+#button-3 {
+    grid-row-start: 4;
+}
+
+#button-4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+}
+
+#button-5 {
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
+#button-6 {
+    grid-row-start: 3;
+}
+
+#button-7 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#button-8 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+#button-9 {
+    grid-row-start: 2;
+}
